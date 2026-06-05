@@ -8,4 +8,4 @@ check:
 	uv run ruff check .
 
 pytest:
-	uv run pytest
+	uv run pytest --cov=gendiff --cov-report=xml
