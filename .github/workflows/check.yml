@@ -30,4 +30,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
+            -Dsonar.projectKey=Ainur2006_python-project-50
+            -Dsonar.organization=ainur2006
             -Dsonar.python.coverage.reportPaths=coverage.xml
