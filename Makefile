@@ -1,8 +1,11 @@
 install:
 	uv sync
 
-diff:
+diffjson:
 	uv run gendiff tests/fixtures/file1.json tests/fixtures/file2.json
+
+diffyml:
+	uv run gendiff tests/fixtures/file1.yml tests/fixtures/file2.yml
 
 check:
 	uv run ruff check .

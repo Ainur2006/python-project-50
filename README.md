@@ -4,4 +4,4 @@
 [![Python CI](https://github.com/Ainur2006/python-project-50/actions/workflows/check.yml/badge.svg)](https://github.com/Ainur2006/python-project-50/actions/workflows/check.yml)
 ### Демонстрация работы  
 
-[Asciinema gendiff](https://asciinema.org/a/aVmmLcfXRwsRYTa3)
+[Asciinema gendiff](https://asciinema.org/a/uLFIFcHE3Uqf3HZI)
