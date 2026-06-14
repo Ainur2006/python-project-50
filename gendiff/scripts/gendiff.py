@@ -1,6 +1,6 @@
 import argparse
 
-from gendiff.parse.diff import generate_diff
+from gendiff.scripts.generate_diff import generate_diff
 
 
 def main():
@@ -20,4 +20,7 @@ def main():
 
     print(result)
     
+
+if __name__ == "__main__":
+    main()
 
