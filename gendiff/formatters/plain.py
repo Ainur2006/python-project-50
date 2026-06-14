@@ -1,6 +1,8 @@
 PROP = "Property "
 ADD = " was added with value: "
 DEL = " was removed"
+LINE = ' was updated. From '
+LINE2 = " to "
 
 
 def format_value(value):
@@ -18,6 +20,7 @@ def format_value(value):
     
     return f"{value}"
 
+
 def make_plain_item(diff, path=""):
     key = diff['name']
     action = diff['action']
@@ -30,7 +33,7 @@ def make_plain_item(diff, path=""):
     elif action == "deleted":
         return f"{PROP}'{current_path}'{DEL}"
     elif action == "updating":
-        return f"{PROP}'{current_path}' was updated. From {old_value} to {new_value}"
+        return f"{PROP}'{current_path}'{LINE}{old_value}{LINE2}{new_value}"
     elif action == "nested":
         children = diff.get('children')
         return make_plain_diff(children, current_path)
