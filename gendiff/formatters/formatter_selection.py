@@ -1,5 +1,6 @@
 from gendiff.formatters.plain import format_diff_plain
 from gendiff.formatters.stylish import format_diff_stylish
+from gendiff.formatters.json import format_diff_json
 
 
 def formatter_selection(diff, formatter):
@@ -7,5 +8,7 @@ def formatter_selection(diff, formatter):
         return format_diff_stylish(diff)
     elif formatter == 'plain':
         return format_diff_plain(diff)
+    elif formatter == 'json':
+        return format_diff_json(diff)
     else:
         raise ValueError(f"Unknown formatter: {formatter}")

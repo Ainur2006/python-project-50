@@ -55,3 +55,17 @@ def test_plain_formatter_yaml():
     )
 
     assert result == expected
+
+
+def test_json_formatter_json():
+    expected = Path(
+        "tests/fixtures/json_result.txt"
+    ).read_text()
+
+    result = generate_diff(
+        "tests/fixtures/file1.json",
+        "tests/fixtures/file2.json",
+        formatter="json",
+    )
+
+    assert result == expected
